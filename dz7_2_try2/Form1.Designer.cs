@@ -37,9 +37,9 @@ namespace dz7_2_try2
             this.topmenubtnPause = new System.Windows.Forms.ToolStripMenuItem();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.game_wrapper = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.taked = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnTakeAnswer = new System.Windows.Forms.Button();
@@ -136,6 +136,15 @@ namespace dz7_2_try2
             this.game_wrapper.TabStop = false;
             this.game_wrapper.Text = "Игра";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(247, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(235, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Человек предоставил для сравнения число :";
+            // 
             // taked
             // 
             this.taked.AutoSize = true;
@@ -154,15 +163,6 @@ namespace dz7_2_try2
             this.label4.TabIndex = 7;
             this.label4.Text = "Человек предоставил для сравнения число :\r\n";
             this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(247, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "label2";
             // 
             // label3
             // 

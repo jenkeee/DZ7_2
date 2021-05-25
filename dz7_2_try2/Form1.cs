@@ -87,7 +87,7 @@ namespace dz7_2_try2
             game_wrapper.Visible = true;
             pause_wrapper.Visible = isGame;
             menu_wrapper.Visible = isGame;
-            label2.Text = "0";
+            //label2.Text = "0";
             taked.Text = "";
             shlam2 = null;
             textBox1.Text = "";
@@ -112,6 +112,7 @@ namespace dz7_2_try2
         private void checkTHIS()
         {
             string shlam = textBox1.Text;
+            string ltransformLabel2 = "Человек предоставил для сравнения число :"; // 
             taked.Text = "";
             if (int.TryParse(textBox1.Text, out int userAnswer)) // на ходу объявили переменную и дали ей значение текстбокса если оно есть
             {
@@ -134,7 +135,7 @@ namespace dz7_2_try2
                 {
                     steps++;
                     label3.Text = $"Попытка {steps}. Не верный ответ.\nЗагаданное число меньше.";
-                    label2.Text = userAnswer.ToString();                    
+                    label2.Text = ltransformLabel2 + " " + userAnswer.ToString();
                     //shlam2 = shlam2 + shlam;
                     shlam2 = $"{shlam2}\n{shlam}";
                     taked.Text = shlam2;
@@ -143,7 +144,7 @@ namespace dz7_2_try2
             else
             {
                 label3.Text = $"попытка не засчитана\nВведите число от 1 до 100 \n<<{shlam}>> не число";
-                label2.Text = userAnswer.ToString();
+                //label2.Text = label2.Text + " " + userAnswer.ToString();
             }            
             textBox1.Text = "";
         }
