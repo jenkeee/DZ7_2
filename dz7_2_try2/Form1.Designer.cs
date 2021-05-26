@@ -150,8 +150,9 @@ namespace dz7_2_try2
             // 
             // taked
             // 
+            this.taked.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.taked.AutoSize = true;
-            this.taked.Location = new System.Drawing.Point(362, 31);
+            this.taked.Location = new System.Drawing.Point(545, 19);
             this.taked.Name = "taked";
             this.taked.Size = new System.Drawing.Size(280, 13);
             this.taked.TabIndex = 8;
@@ -159,18 +160,19 @@ namespace dz7_2_try2
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 61);
+            this.label4.Location = new System.Drawing.Point(374, 19);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(235, 13);
+            this.label4.Size = new System.Drawing.Size(165, 13);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Человек предоставил для сравнения число :\r\n";
+            this.label4.Text = "Числа которые ты уже вводил:\r\n";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(58, 286);
+            this.label3.Location = new System.Drawing.Point(9, 220);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(285, 52);
             this.label3.TabIndex = 5;
@@ -190,7 +192,7 @@ namespace dz7_2_try2
             // 
             this.btnTakeAnswer.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnTakeAnswer.Enabled = false;
-            this.btnTakeAnswer.Location = new System.Drawing.Point(677, 182);
+            this.btnTakeAnswer.Location = new System.Drawing.Point(121, 185);
             this.btnTakeAnswer.Name = "btnTakeAnswer";
             this.btnTakeAnswer.Size = new System.Drawing.Size(75, 23);
             this.btnTakeAnswer.TabIndex = 1;
@@ -368,9 +370,9 @@ namespace dz7_2_try2
             this.ClientSize = new System.Drawing.Size(782, 472);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.game_wrapper);
             this.Controls.Add(this.pause_wrapper);
             this.Controls.Add(this.menu_wrapper);
-            this.Controls.Add(this.game_wrapper);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";

@@ -98,6 +98,8 @@ namespace dz7_2_try2
             upNUM = 100;
             topmenubtnPause.Visible = true;
             Main_menu_layout.Visible = false;
+            takeHelp.Visible = true;
+            Main_menu_forms.Visible = false;
 
         }
         private void btnNewGame_Click(object sender, EventArgs e)
@@ -129,6 +131,11 @@ namespace dz7_2_try2
                     label3.Text = $"Поздравляю! Это правильный ответ.\nВам потребовалось {steps} попыток.";
                     textBox1.Enabled = false; // мы выиграли отключаем на ввод
                     btnTakeAnswer.Enabled = false;
+
+                    topmenubtnPause.Visible = false;
+                    Main_menu_layout.Visible = true;
+                    takeHelp.Visible = false;
+                    Main_menu_forms.Visible = false;
                 }
                 //else if (userAnswer < CompNum) lowNUM = userAnswer;
                 //else if (userAnswer > CompNum) upNUM = userAnswer;
