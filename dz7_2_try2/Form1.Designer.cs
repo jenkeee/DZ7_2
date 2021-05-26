@@ -29,6 +29,7 @@ namespace dz7_2_try2
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Main_menu_forms = new System.Windows.Forms.ToolStripMenuItem();
             this.takeHelp = new System.Windows.Forms.ToolStripMenuItem();
@@ -87,6 +88,7 @@ namespace dz7_2_try2
             this.takeHelp.Name = "takeHelp";
             this.takeHelp.Size = new System.Drawing.Size(76, 20);
             this.takeHelp.Text = "Подсказка";
+            this.takeHelp.Click += new System.EventHandler(this.takeHelp_Click);
             // 
             // topmenubtn_Exit
             // 
@@ -139,7 +141,7 @@ namespace dz7_2_try2
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(247, 61);
+            this.label2.Location = new System.Drawing.Point(9, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(235, 13);
             this.label2.TabIndex = 6;
@@ -355,6 +357,7 @@ namespace dz7_2_try2
             this.Controls.Add(this.game_wrapper);
             this.Controls.Add(this.pause_wrapper);
             this.Controls.Add(this.menu_wrapper);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";

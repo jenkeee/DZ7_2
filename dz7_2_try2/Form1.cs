@@ -19,7 +19,8 @@ namespace dz7_2_try2
         int CompNum; // число которое загадал комп
         int UserNum; // число пользователя
         int steps; // попытка угадать число
-
+        int lowNUM = 0;
+        int upNUM = 100;
 
         // нам потребуеться нарисовать форму на другом слое у нас же isGame false
 
@@ -91,6 +92,8 @@ namespace dz7_2_try2
             taked.Text = "";
             shlam2 = null;
             textBox1.Text = "";
+            lowNUM = 0;
+            upNUM = 100;
 
         }
         private void btnNewGame_Click(object sender, EventArgs e)
@@ -108,28 +111,33 @@ namespace dz7_2_try2
             Exit();            
         }
         // ///////////////////////////////////////мы получили число от компа CompNum теперь можно сравнивать число пользователя с компом 
-        string shlam2; // обязательно объявляем  до метода , иначе просто перезапишет. 
+        string shlam2; // обязательно объявляем  до метода , иначе просто перезапишет. // работает но не валидно
         private void checkTHIS()
         {
             string shlam = textBox1.Text;
             string ltransformLabel2 = "Человек предоставил для сравнения число :"; // 
             taked.Text = "";
+           
             if (int.TryParse(textBox1.Text, out int userAnswer)) // на ходу объявили переменную и дали ей значение текстбокса если оно есть
             {
                 if (userAnswer == CompNum)
                 {
                     label3.Text = $"Поздравляю! Это правильный ответ.\nВам потребовалось {steps} попыток.";
                     textBox1.Enabled = false; // мы выиграли отключаем на ввод
-                    btnTakeAnswer.Enabled = false;                    
+                    btnTakeAnswer.Enabled = false;
                 }
+                //else if (userAnswer < CompNum) lowNUM = userAnswer;
+                //else if (userAnswer > CompNum) upNUM = userAnswer;
                 else if (userAnswer < CompNum)
                 {
                     steps++;
                     label3.Text = $"Попытка {steps}. Не верный ответ.\nЗагаданное число больше.";
-                    label2.Text = userAnswer.ToString();                    
+                    label2.Text = userAnswer.ToString();
+                    shlam2 = taked.Text;
                     shlam2 = $"{shlam2}\n{shlam}";
                     taked.Text = shlam2;
-                    
+                    if (userAnswer > lowNUM && userAnswer < CompNum)
+                    { lowNUM = userAnswer; }
                 }
                 else if (userAnswer > CompNum)
                 {
@@ -137,9 +145,12 @@ namespace dz7_2_try2
                     label3.Text = $"Попытка {steps}. Не верный ответ.\nЗагаданное число меньше.";
                     label2.Text = ltransformLabel2 + " " + userAnswer.ToString();
                     //shlam2 = shlam2 + shlam;
+                    //shlam2 = taked.Text;
                     shlam2 = $"{shlam2}\n{shlam}";
                     taked.Text = shlam2;
-                }
+                    if (userAnswer < upNUM && userAnswer > CompNum)
+                    { upNUM = userAnswer; }
+                }               
             }
             else
             {
@@ -183,6 +194,11 @@ namespace dz7_2_try2
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void takeHelp_Click(object sender, EventArgs e)
+        {
+           MessageBox.Show($"Ваше число в диапазоне от {lowNUM} до {upNUM}");
         }
 
 
