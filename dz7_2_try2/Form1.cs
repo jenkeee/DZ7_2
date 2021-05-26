@@ -132,8 +132,10 @@ namespace dz7_2_try2
                 {
                     steps++;
                     label3.Text = $"Попытка {steps}. Не верный ответ.\nЗагаданное число больше.";
-                    label2.Text = userAnswer.ToString();
-                    shlam2 = taked.Text;
+                    //label2.Text = userAnswer.ToString();
+                    label2.Text = ltransformLabel2 + " " + userAnswer.ToString();
+
+                    //shlam2 = taked.Text;
                     shlam2 = $"{shlam2}\n{shlam}";
                     taked.Text = shlam2;
                     if (userAnswer > lowNUM && userAnswer < CompNum)
@@ -144,8 +146,10 @@ namespace dz7_2_try2
                     steps++;
                     label3.Text = $"Попытка {steps}. Не верный ответ.\nЗагаданное число меньше.";
                     label2.Text = ltransformLabel2 + " " + userAnswer.ToString();
+
                     //shlam2 = shlam2 + shlam;
                     //shlam2 = taked.Text;
+
                     shlam2 = $"{shlam2}\n{shlam}";
                     taked.Text = shlam2;
                     if (userAnswer < upNUM && userAnswer > CompNum)
