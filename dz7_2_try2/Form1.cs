@@ -26,9 +26,11 @@ namespace dz7_2_try2
 
         private void topmenubtnPause_Click(object sender, EventArgs e) // событие кнопки пауза
         {
-             game_wrapper.Visible = false;
+            if (game_wrapper.Visible) { 
+            game_wrapper.Visible = false;
             pause_wrapper.Visible = true;
             menu_wrapper.Visible = false; //  Main_menu_layout.Visible = false; полностью уберет и кнопку и форму
+                                          }
         }
 
         private void Main_menu_forms_Click(object sender, EventArgs e) // 
@@ -94,6 +96,8 @@ namespace dz7_2_try2
             textBox1.Text = "";
             lowNUM = 0;
             upNUM = 100;
+            topmenubtnPause.Visible = true;
+            Main_menu_layout.Visible = false;
 
         }
         private void btnNewGame_Click(object sender, EventArgs e)
@@ -173,7 +177,8 @@ namespace dz7_2_try2
             btnTakeAnswer.Enabled = false;
             game_wrapper.Visible = false;
             pause_wrapper.Visible = false;
-            menu_wrapper.Visible = true;
+            menu_wrapper.Visible = true;            
+            topmenubtnPause.Visible = false;
         }
 
 
@@ -203,6 +208,14 @@ namespace dz7_2_try2
         private void takeHelp_Click(object sender, EventArgs e)
         {
            MessageBox.Show($"Ваше число в диапазоне от {lowNUM} до {upNUM}");
+        }
+
+        private void btn_pre_exit_Click(object sender, EventArgs e)
+        {
+            game_wrapper.Visible = false;
+            pause_wrapper.Visible = false;
+            menu_wrapper.Visible = true;
+            topmenubtnPause.Visible = false;
         }
 
 

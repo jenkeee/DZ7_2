@@ -50,10 +50,11 @@ namespace dz7_2_try2
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pause_wrapper = new System.Windows.Forms.GroupBox();
+            this.btnContinue = new System.Windows.Forms.Button();
+            this.btnNewGame = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnNewGame = new System.Windows.Forms.Button();
-            this.btnContinue = new System.Windows.Forms.Button();
+            this.btn_pre_exit = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.game_wrapper.SuspendLayout();
             this.menu_wrapper.SuspendLayout();
@@ -283,6 +284,32 @@ namespace dz7_2_try2
             this.pause_wrapper.TabStop = false;
             this.pause_wrapper.Text = "Пауза";
             // 
+            // btnContinue
+            // 
+            this.btnContinue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnContinue.Location = new System.Drawing.Point(301, 47);
+            this.btnContinue.Name = "btnContinue";
+            this.btnContinue.Size = new System.Drawing.Size(143, 38);
+            this.btnContinue.TabIndex = 1;
+            this.btnContinue.Text = "Продолжить игру";
+            this.btnContinue.UseVisualStyleBackColor = true;
+            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
+            // 
+            // btnNewGame
+            // 
+            this.btnNewGame.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNewGame.Location = new System.Drawing.Point(301, 131);
+            this.btnNewGame.Name = "btnNewGame";
+            this.btnNewGame.Size = new System.Drawing.Size(143, 38);
+            this.btnNewGame.TabIndex = 0;
+            this.btnNewGame.Text = "Новая игра";
+            this.btnNewGame.UseVisualStyleBackColor = true;
+            this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -292,60 +319,47 @@ namespace dz7_2_try2
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel1.Controls.Add(this.btnExit, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.btnNewGame, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnContinue, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnExit, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.btn_pre_exit, 1, 5);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 19);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 7;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16F));
+            this.tableLayoutPanel1.RowCount = 9;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.45833F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.45833F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.41667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.45833F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.41667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.45833F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.45833F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.41667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.45833F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(746, 391);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // btnExit
             // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.Location = new System.Drawing.Point(301, 267);
+            this.btnExit.Location = new System.Drawing.Point(301, 303);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(143, 56);
+            this.btnExit.Size = new System.Drawing.Size(143, 34);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "Выход";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // btnNewGame
+            // btn_pre_exit
             // 
-            this.btnNewGame.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btn_pre_exit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNewGame.Location = new System.Drawing.Point(301, 166);
-            this.btnNewGame.Name = "btnNewGame";
-            this.btnNewGame.Size = new System.Drawing.Size(143, 56);
-            this.btnNewGame.TabIndex = 0;
-            this.btnNewGame.Text = "Новая игра";
-            this.btnNewGame.UseVisualStyleBackColor = true;
-            this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
-            // 
-            // btnContinue
-            // 
-            this.btnContinue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnContinue.Location = new System.Drawing.Point(301, 65);
-            this.btnContinue.Name = "btnContinue";
-            this.btnContinue.Size = new System.Drawing.Size(143, 56);
-            this.btnContinue.TabIndex = 1;
-            this.btnContinue.Text = "Продолжить игру";
-            this.btnContinue.UseVisualStyleBackColor = true;
-            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
+            this.btn_pre_exit.Location = new System.Drawing.Point(301, 215);
+            this.btn_pre_exit.Name = "btn_pre_exit";
+            this.btn_pre_exit.Size = new System.Drawing.Size(143, 38);
+            this.btn_pre_exit.TabIndex = 3;
+            this.btn_pre_exit.Text = "Выход в главное меню";
+            this.btn_pre_exit.UseVisualStyleBackColor = true;
+            this.btn_pre_exit.Click += new System.EventHandler(this.btn_pre_exit_Click);
             // 
             // Form1
             // 
@@ -354,9 +368,9 @@ namespace dz7_2_try2
             this.ClientSize = new System.Drawing.Size(782, 472);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.game_wrapper);
             this.Controls.Add(this.pause_wrapper);
             this.Controls.Add(this.menu_wrapper);
+            this.Controls.Add(this.game_wrapper);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -389,17 +403,18 @@ namespace dz7_2_try2
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox menu_wrapper;
         private System.Windows.Forms.ToolStripMenuItem topmenubtnPause;
-        private System.Windows.Forms.GroupBox pause_wrapper;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnContinue;
-        private System.Windows.Forms.Button btnNewGame;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label taked;
+        private System.Windows.Forms.GroupBox pause_wrapper;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btnNewGame;
+        private System.Windows.Forms.Button btnContinue;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btn_pre_exit;
     }
 }
 
